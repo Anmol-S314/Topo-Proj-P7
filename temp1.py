@@ -1,12 +1,15 @@
 import numpy as np
+import math
 filename = input("Enter the filename: \n")
 #filename = "marschner_lobb_41x41x41_uint8.raw.txt"
-
-dim_x, dim_y, dim_z = 41,41,41
+A = np.fromfile(filename, dtype='uint8', sep="")
+dim = math.ceil(pow(len(A),1/3))
+print(dim)
+dim_x, dim_y, dim_z = dim,dim,dim
 v=dim_x*dim_y*dim_z
 a=0
 e=0
-A = np.fromfile(filename, dtype='uint8', sep="")
+
 A = A.reshape((dim_x, dim_y, dim_z))
 c=int(input("Enter the c value: "))
 
