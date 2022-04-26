@@ -1,6 +1,6 @@
 import numpy as np
-
-filename = "marschner_lobb_41x41x41_uint8.raw.txt"
+filename = input("Enter the filename: \n")
+#filename = "marschner_lobb_41x41x41_uint8.raw.txt"
 
 dim_x, dim_y, dim_z = 41,41,41
 v=dim_x*dim_y*dim_z
